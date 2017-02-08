@@ -1,0 +1,89 @@
+{
+  "versionSetList": [
+    {
+      "name": "RatingsDataClient",
+      "version": "1.0.1",
+      "description": null,
+      "propertyGroupReferences": [
+        {
+          "name": "msl-ratings-data-client",
+          "version": "1.0.1"
+        }
+      ],
+      "createdDate": null,
+      "scopedPropertyValueKeys": null,
+      "typeHierarchyEnabled": true
+    }
+  ],
+  "propertyGroupList": [
+    {
+      "name" : "msl-ratings-data-client",
+      "version" : "1.0.1",
+      "description" : "Million Song library Ratings Data Client Service",
+      "type" : "APP",
+      "active" : true,
+      "properties" : [ {
+        "name" : "cassandra.cluster",
+        "description" : "Group of IPs or domains that belong to the cassandra server(s) from wich Ratings Data Client pulls data",
+        "defaultValue" : "127.0.0.1",
+        "propertyScopedValues": [
+            {
+              "value": "10.250.85.219,10.250.85.220,10.250.85.221",
+              "scopeSet": [{"key": "env","value": "dev"}]
+            },
+            {
+              "value": "52.26.35.97",
+              "scopeSet": [{"key": "env","value": "prod"}]
+            }
+          ]
+        }, 
+        {
+          "name" : "cassandra.keyspace",
+          "description" : "Keyspace of the cassandra DB",
+          "defaultValue" : "msl",
+          "propertyScopedValues" : []
+        },
+        {
+          "name" : "cassandra.region",
+          "description" : "Region for the cassandra server",
+          "defaultValue" : "us-west-2",
+          "propertyScopedValues" : []
+        },
+        {
+          "name" : "paging.state.ttl",
+          "description" : "Paging State Time to live (secs)",
+          "defaultValue" : "3600",
+          "propertyScopedValues" : []
+        }
+      ]
+    }
+  ],
+  "mappingList": [
+    {
+      "application": "mslratingsdataclient",
+      "vsReference": {
+        "name": "RatingsDataClient",
+        "version": "1.0.1"
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
